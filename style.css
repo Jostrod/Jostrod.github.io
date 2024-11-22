@@ -118,24 +118,24 @@ section {
 .robot-pic {
     display: block;
     margin: 0 auto 20px;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 40px;
     border-radius: 0%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .code-pic_arm {
     display: block;
     margin: 0 auto 20px;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 40px;
     border-radius: 0%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 .code-pic_sensor {
     display: block;
     margin: 0 auto 20px;
-    width: 100px;
-    height: 150px;
+    width: 50px;
+    height: 40px;
     border-radius: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
