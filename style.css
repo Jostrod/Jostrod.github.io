@@ -1,57 +1,160 @@
+/* Grunnleggende styling */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #f4f4f4, #eaeaea); /* Myk gradient */
     color: #333;
 }
 
-header {
-    background: #333;
+/* Globale stiler */
+h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #444;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Sidebar-meny */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #333;
     color: #fff;
-    padding: 10px 0;
+    padding: 20px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar h2 {
+    font-size: 24px;
+    color: #fff;
     text-align: center;
 }
 
-nav ul {
+.sidebar ul {
     list-style: none;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 15px;
+.sidebar ul li {
+    margin: 15px 0;
 }
 
-nav ul li a {
+.sidebar ul li a {
     color: #fff;
     text-decoration: none;
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s ease;
 }
 
-section {
-    padding: 20px;
-    background: #fff;
-    margin: 20px 0;
+.sidebar ul li a:hover {
+    color: #00bcd4;
 }
 
-.project {
-    background: #e4e4e4;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-footer {
-    text-align: center;
-    padding: 10px 0;
-    background: #333;
+/* Knapp for å åpne/lukke menyen */
+.menu-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px; /* Standard posisjon */
+    background: #007bff;
     color: #fff;
-    margin-top: 20px;
-}
-img {
-    border-radius: 50%;
-    border: 2px solid #333;
-    max-width: 20%;
-    height: auto;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1100; /* Sørger for at knappen alltid ligger over menyen */
+    transition: left 0.3s ease; /* Flytt knappen mykt når menyen åpnes */
 }
 
+.sidebar.open + .menu-toggle {
+    left: 260px; /* Flytt knappen til høyre for å holde den synlig */
+}
+
+.menu-toggle:hover {
+    background: #0056b3;
+}
+
+.menu-toggle:hover {
+    background: #0056b3;
+}
+
+/* Seksjoner */
+section {
+    padding: 60px 20px;
+    margin: 20px auto;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Bilder */
+.profile-pic {
+    display: block;
+    margin: 0 auto 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.robot-pic {
+    display: block;
+    margin: 0 auto 20px;
+    width: 500px;
+    height: 400px;
+    border-radius: 0%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+/* Prosjekter */
+.project-card {
+    background: #f9f9f9;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+}
+
+/* Ferdigheter */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+}
+
+.skills-list li {
+    background: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.skills-list li:hover {
+    background: #0056b3;
+}
