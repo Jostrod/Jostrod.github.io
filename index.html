@@ -3,81 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Min E-Portefølje</title>
+    <title>E-Portefølje</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Jostein Rodahl</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">Om meg</a></li>
-                <li><a href="#projects">Prosjekter</a></li>
-                <li><a href="#utdanning">utdanning</a></li>
-                <li><a href="#skills">Ferdigheter</a></li>
-                <li><a href="#contact">Kontakt</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Meny-knapp -->
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
 
+    <!-- Sidebar-meny -->
+    <div class="sidebar" id="sidebar">
+        <h2>Meny</h2>
+        <ul>
+            <li><a href="#about">Om meg</a></li>
+            <li><a href="#projects">Prosjekter</a></li>
+            <li><a href="#utdanning">Utdanning</a></li>
+            <li><a href="#skills">Ferdigheter</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </div>
+
+    <!-- Om meg-seksjon -->
     <section id="about">
         <h2>Om meg</h2>
-        <img src="bilde.jpg" alt="Bilde av meg">
-        <p>Hei! Jeg heter Jostein Rodahl, jeg er musiker og fremtidig dataingeniør. 
-            Her finner du litt om meg, mine interesser og mine erfaringer. Jeg har et mål om å kombinere min kunnskap
-            om musikk med mine ferdigheter i programering, til å en dag utvikle min egen DAW (Digital Audio Workstation). 
+        <img src="fbbilde.jpg" alt="Profilbilde av meg" class="profile-pic">
+        <p>Hei! Jeg heter Jostein Rodahl, musiker og fremtidig dataingeniør. Jeg elsker teknologi, kreativitet, og å skape løsninger som gjør en forskjell.
+        Jeg har en bachelorgrad i musikkvitenskap fra NTNU Dragvoll, og er nå i gang med en bachelor i dataingeniør ved NTNU Gløshaugen.
+        En dag vil jeg kombinere mine egenskaper innen musikk og teknologi for å skape nye, digitale verktøy for musikere.
+        Her finner du informasjon om meg, mine prosjekter, utdanning, ferdigheter og hvordan du kan kontakte meg.
         </p>
     </section>
 
+    <!-- Prosjekter-seksjon -->
     <section id="projects">
         <h2>Prosjekter</h2>
-        <div class="project">
-            <h3>Prosjekt 1</h3>
-            <p>Lego-rally prosjekt. I faget IDATT1004 - teambasert samarbeid, jobbet jeg og min gruppe med å utvikle
-                en lego-rally bil. Bilen ble kun bygget av lego, og var programmert i python på en EV3-maskin. 
-                Løpet gikk ut på at bilene skulle følge en svart stripe rundt en bane. Igjennom prosjektet lærte jeg 
-                mye om arbeidsfordeling i team, optimalisering av python-koder og planlegging av prosjekter. Gruppen jobbet
-                dynamisk, så alle bidro til både programmering, dokumentering og bygging. Jeg og min gruppe lærte spessielt
-                verdien av å sette av noen minutter til å fordele arbeidsoppgaver for å sikre strukturert arbeidsflyt. 
-
-            <h3>Prosjekt 2</h3>
-                <p> Samtidig som lego-prosjektet har jeg også utført øvinger i IDATT1003 - programmering 1. Her har jeg blitt
-                    kjent med grunnleggende konsepter i objekt-orientert-programmering. Dette prosjektet har så langt bestått av 6 mindre 
-                    innleveringer bestående av 2-3 oppgaver, samt oppstarten en større innlevering. De mindre oppgavene besto av ting som 
-                    tilfeldig-tall-generatorer, program for å analysere tekster, valuttakonvertering og koding av enkle terningspill.
-                    I den større oppgaven lager jeg i prinsippet et virituelt kjøleskap, hvor man kunne sette inn og ut varer, sjekke dato
-                    på varer og sjekke samlet verdi på varene. 
+        <div class="project-card">
+            <h3>Lego-rally</h3>
+            <p>Dette var et prosjekt gjennomført i faget IDATT1004. Her konkurrerte jeg og min gruppe med andre grupper i klassen.
+            Gruppene bygde hver sin legobil som fulgte en svart stripe rundt en bane.
+            Jeg og min gruppe hadde fri arbeidsflyt, så samtlige i gruppen bidro med både byggingen, kodingen og testingen av vår bil.
+            Igjennom prosjektet lærte jeg og min gruppe verdien av hyppige møter og strukturert arbeidsflyt. 
+            For at bilen skulle klare skarpe svinger, men samtidig kjøre jevnt brukte vi en PID-algoritme programmert i micropython. 
             </p>
         </div>
-    </section>
+        <div class="project-card">
+            <h3>Automatisk vannerobot til planter</h3>
+            <p> I dette prosjektet fikk jeg og gruppen bestemme selv hvilken robot vi skulle bygge. 
+                Etter brainstorming og anonym avstemning, ble vi enige om å bygge en robot for å automatisk vanne planter. 
+                Arbeidsprosessen startet med at gruppen fytle ut et GANTT-diagram som et utgangspunkt til arbeidsprosessen. 
+                Det ble også oprettet et issueboard på GitLab for å administrere arbeidsoppgavene.
+                Selve roboten besto av to deler: en forlengbar arm, styrt av en LEGO-EV3, og en arduiono koblet til en fuktsensor for å måle fuktnivå i jorden.
+            </p>
+            <img src="Vannerobot.jpg" alt="Squirte-robot" class="robot-pic">
+            <p>Grunnet tidsbegrensninger rakk ikke gruppen få tak i en passende vannpumpe, men testene av roboten virker lovende. 
+                En vannpumpe og vanntank vil enkel kunne kobles til roboten for å gjøre den fullstendig autonom.
+                Prosjektet ble dokumentert igjennom hele prosessen og dokumentert i en rapport skrevet av gruppen.
+                Vi tok med oss lærdommen fra rally-prosjektet, og dokumenterte flittig igjennom hele prosjektet. <br />
 
-    <section id="utdanning"></section>
-        <h2>utdanning</h2>
-        <div class="project">
-            <p>2024 - nåværende: Påbegynt bachelor som dataingeniør: NTNU Gløshaugen<p>
-            <p>2019 - 2022: Bachelor i musikkvitenskap; NTNU Dragvoll<p>
+            </p>
         </div>
+        <div class="project-card">
+            <h3>Øvinger i programmering</h3>
+            <p>Igjennom semesteret har jeg gjennomført 11 øvinger i faget programmering1 IDATT1003. Øvingene besto av blandt annet disse programmene:<br />
+                <br />
+                - Et register over arrangementer <br />
+                - Et register over eiendommer<br />
+                - Et tekstbasert kjøleskap<br />
+                - Valutta-konverterer<br />
+                - Program for tekstanalyse<br />
+                - Program for å regne med matriser<br />
+                <br />
+            <p>Igjennom dette faget har jeg blitt kjent med grunleggende prinsipper innen OOP og Java. Jeg har også 
+                fått kunskap om bruken av GitLab og GitHub, samt å kode i team. Programmet for å simulere kjøleskapet var definitivt 
+                det største, og er forstatt under konstruksjon. I dette prosjektet har jeg lært å jobbe i Maven, samt viktigheten av
+                å ha en klar struktur på koden. 
+
+            </p>
+
+
+            </p>
     </section>
 
-    <section id="skills">
-        <h2>Ferdigheter</h2>
+    <!-- Utdanning-seksjon -->
+    <section id="utdanning">
+        <h2>Utdanning</h2>
         <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>Java</li>
-            <li>Python</li>
+            <li><strong>2024 - Nåværende:</strong> Bachelor i Dataingeniør, NTNU Gløshaugen</li>
+            <li><strong>2019 - 2022:</strong> Bachelor i Musikkvitenskap, NTNU Dragvoll</li>
         </ul>
     </section>
 
-    <section id="contact">
-        <h2>Kontakt</h2>
-        <p>Du kan kontakte meg via e-post: <a href="mailto:dinemail@eksempel.com">jostein.rodahl@hotmail.com</a></p>
+    <!-- Ferdigheter-seksjon -->
+    <section id="skills">
+        <h2>Ferdigheter</h2>
+        <ul class="skills-list">
+            <li>HTML & CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Java</li>
+        </ul>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Jostein Rodahl. Alle rettigheter forbeholdt.</p>
-    </footer>
+    <!-- Kontakt-seksjon -->
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Du kan kontakte meg via e-post: <a href="mailto:jostein.rodahl@hotmail.com">jostein.rodahl@hotmail.com</a></p>
+    </section>
 
     <script src="script.js"></script>
 </body>
