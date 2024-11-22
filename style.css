@@ -134,8 +134,8 @@ section {
 .code-pic_sensor {
     display: block;
     margin: 0 auto 20px;
-    width: 500px;
-    height: 450px;
+    width: 100px;
+    height: 150px;
     border-radius: 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
