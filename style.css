@@ -123,8 +123,8 @@ img {
 .robot-pic {
     display: block;
     margin: 0 auto 20px;
-    width: 200px;
-    height: 150px;
+    width: 300px;
+    height: 250px;
     border-radius: 0%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
